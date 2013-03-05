@@ -119,7 +119,7 @@ object ThriftPlugin extends Plugin {
       if (! outputDir.exists )
         outputDir.mkdirs
       files.foreach { schema =>
-        val cmd = "%s -gen %s -o %s %s".format(thriftBin,
+        val cmd = "%s -gen %s -out %s %s".format(thriftBin,
                                         language + options.mkString(":",",",""),
                                         outputDir, schema)
         logger.info("Compiling schema with command: %s" format cmd)
